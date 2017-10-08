@@ -28,6 +28,7 @@ onmessage = function (event) {
     });
 };
 
+
 // TODO Make postMessage invocations for interval prints to inform interface about progress.
 const PRINT_INTERVAL = 1000;
 const populate = (count, length) => {
