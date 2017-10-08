@@ -1,0 +1,61 @@
+body {
+    padding: 20px 100px;
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.inputs input,
+.actions button {
+    width: 80px;
+}
+
+.output-wrapper {
+    margin-left: 20px;
+    width: 75%;
+    float: right;
+}
+
+.output {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gainsboro;
+    padding: 20px;
+    min-height: 80px;
+}
+
+.output p {
+    display: inline;
+    margin: 0 6px 4px 0;
+}
+
+.output p::after {
+    content: ',';
+}
+
+.time {
+    width: 20%;
+    float: left;
+}
+
+.time .sync-time,
+.time .async-time {
+    white-space: nowrap;
+}
+
+.time .sync-time span,
+.time .async-time span {
+    font-size: 20px;
+}

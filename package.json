@@ -1,0 +1,13 @@
+{
+  "name": "parallel",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "dependencies": {
+    "debug": "^2.3.3",
+    "ejs": "^2.5.7",
+    "express": "~4.14.0",
+    "nodemon": "^1.11.0"
+  }
+}
