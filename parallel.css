@@ -1,0 +1,16 @@
+body {
+    padding: 100px;
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+.output p {
+    display: inline;
+    margin-right: 5px;
+}
+
+.output p::after {
+    content: ',';
+}
