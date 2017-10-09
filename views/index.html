@@ -9,27 +9,32 @@
 
 <body>
 
-<div class="controls">
-    <h1>Parallelism</h1>
-    <div class="inputs">
-        <input type="number" class="count" placeholder="Count"/>
-        <input type="number" class="length" placeholder="Length"/>
+    <div class="controls">
+        <h1>To Parallize or not...</h1>
+        <div class="inputs">
+            <input type="checkbox" class="async-check" id="check" />
+            <label for="check">Execute Async?</label>
+            <input type="number" class="count" id="count" placeholder="Count" />
+            <label for="count">Count</label>
+            <input type="number" class="length" id="length" placeholder="Length" />
+            <label for="length">Length</label>
+        </div>
+        <div class="actions">
+            <button class="populate-button">Populate</button>
+            <button class="procedure-button">Procedure</button>
+            <button class="kill-button">Kill</button>
+        </div>
     </div>
-    <div class="actions">
-        <button class="populate-button">Populate</button>
-        <button class="procedure-button">Procedure</button>
+    <div class="time">
+        <h2>Time</h2>
+        <p class="sync-time">Sync: <span>0</span> ms</p>
+        <p class="async-time">Async: <span>0</span> ms</p>
     </div>
-</div>
-<div class="time">
-    <h2>Time</h2>
-    <p class="sync-time">Sync: <span>0</span> ms</p>
-    <p class="async-time">Async: <span>0</span> ms</p>
-</div>
-<div class="output-wrapper">
-    <h2>Top 1000 results</h2>
-    <div class="output">
+    <div class="output-wrapper">
+        <h2>Top 1000 results</h2>
+        <div class="output">
+        </div>
     </div>
-</div>
 
 </body>
 
