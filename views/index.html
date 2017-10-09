@@ -9,32 +9,58 @@
 
 <body>
 
-    <div class="controls">
-        <h1>To Parallize or not...</h1>
-        <div class="inputs">
-            <input type="checkbox" class="async-check" id="check" />
-            <label for="check">Execute Async?</label>
-            <input type="number" class="count" id="count" placeholder="Count" />
+<div class="header">
+    <h1>To Parallelize or not to </h1>
+    <h1><span>&nbsp;&nbsp;&nbsp;</span>Parallelize</h1>
+</div>
+
+<div class="controls">
+
+    <div class="inputs">
+        <div class="count-input">
+            <input type="number" value="10000" step="1000" class="count" id="count" placeholder="Count"/>
             <label for="count">Count</label>
-            <input type="number" class="length" id="length" placeholder="Length" />
+        </div>
+
+        <div class="length-input">
+            <input type="number" value="10000" step="1000" class="length" id="length" placeholder="Length"/>
             <label for="length">Length</label>
         </div>
-        <div class="actions">
-            <button class="populate-button">Populate</button>
-            <button class="procedure-button">Procedure</button>
-            <button class="kill-button">Kill</button>
+
+        <div class="async-input">
+            <input type="checkbox" class="async-check" id="check"/>
+            <label for="check">Execute Async</label>
         </div>
     </div>
-    <div class="time">
-        <h2>Time</h2>
-        <p class="sync-time">Sync: <span>0</span> ms</p>
-        <p class="async-time">Async: <span>0</span> ms</p>
+
+    <div class="actions">
+        <button class="populate-button">Populate</button>
+        <button class="procedure-button">Procedure</button>
     </div>
-    <div class="output-wrapper">
-        <h2>Top 1000 results</h2>
-        <div class="output">
-        </div>
+
+    <div class="progress-wrapper">
+        <div class="progress"></div>
     </div>
+
+    <button class="kill-button">Kill process</button>
+</div>
+
+<div class="sync-time">
+    <h2>Sync</h2>
+    <p class="populate">Populate: <span>0</span> ms</p>
+    <p class="procedure">Procedure: <span>0</span> ms</p>
+</div>
+
+<div class="async-time">
+    <h2>Async</h2>
+    <p class="populate">Populate: <span>0</span> ms</p>
+    <p class="procedure">Procedure: <span>0</span> ms</p>
+</div>
+
+<h2>Top 1000 results</h2>
+<div class="output">
+
+</div>
 
 </body>
 

@@ -3,13 +3,26 @@ body {
     font-family: monospace;
 }
 
+.header {
+    margin: auto;
+    margin-bottom: 60px;
+    width: 500px;
+}
+
+.header span {
+    user-select: none;
+}
+
 h1 {
     font-size: 30px;
+    text-align: left;
+    margin: 0;
 }
 
 h2 {
     font-size: 25px;
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .controls {
@@ -17,15 +30,40 @@ h2 {
     margin-bottom: 30px;
 }
 
-.inputs input,
-.actions button {
-    width: 80px;
+.inputs,
+.actions {
+    margin: auto;
+    max-width: 200px;
+    text-align: left;
 }
 
-.output-wrapper {
-    margin-left: 20px;
-    width: 75%;
-    float: right;
+.inputs input[type='number'] {
+    width: 60px;
+}
+
+.kill-button {
+    display: block;
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: indianred;
+}
+
+.progress-wrapper {
+    border-radius: 10px;
+    border: solid 1px gainsboro;
+    height: 20px;
+    margin: 50px 0 20px 0;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: olivedrab;
+    height: 100%;
+    width: 0%;
 }
 
 .output {
@@ -45,13 +83,21 @@ h2 {
     content: ',';
 }
 
-.time {
+.sync-time, .async-time {
     width: 20%;
     float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.time .sync-time,
-.time .async-time {
+.async-time {
+    clear: both;
+}
+
+.async-time .populate,
+.async-time .procedure,
+.sync-time .populate,
+.sync-time .procedure {
     white-space: nowrap;
 }
 
