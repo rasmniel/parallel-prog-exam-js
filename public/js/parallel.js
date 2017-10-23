@@ -70,6 +70,7 @@ const displayResults = (array) => {
     }
 };
 
+// Display time in the interface for the user to see.
 const displayTime = (time, async, populate) => {
     const elapsed = time.toFixed(4);
     if (async) {
@@ -94,8 +95,10 @@ const displayTime = (time, async, populate) => {
 let worker = null;
 
 const initWorker = () => {
+    // Create new worker thread.
     worker = new Worker('js/worker.js');
 
+    // Initialize incoming messages from the worker thread.
     worker.onmessage = (event) => {
         const
             type = event.data.type,
@@ -122,6 +125,7 @@ const initWorker = () => {
     killButton.addEventListener('click', killAction);
 };
 
+// Send a population request to the worker, and receive a result with time elapsed.
 const populateAction = () => {
     setProgress(0, 1);
     const
@@ -143,6 +147,7 @@ const populateAction = () => {
     }
 };
 
+// Request the worker execute it's procedure and receive a result with a sumArray and time elapsed.
 const procedureAction = () => {
     setProgress(0, 1);
     if (asyncCheck.checked) {
@@ -157,6 +162,7 @@ const procedureAction = () => {
     }
 };
 
+// Kill the worker and initialize a new one.
 const killAction = () => {
     populateButton.removeEventListener('click', populateAction);
     procedureButton.removeEventListener('click', procedureAction);

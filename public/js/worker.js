@@ -3,6 +3,7 @@ let arrayHolder = [];
 // scope.document can be used to determine whether this is actually a worker thread.
 const scope = this;
 
+// Initialize worker's message handling for incoming messages.
 onmessage = function (event) {
     const
         type = event.data.type,
@@ -24,6 +25,7 @@ onmessage = function (event) {
     });
 };
 
+// Create an arrayHolder containing 'count' arrays, each with a length of 'length'.
 const populate = (count, length) => {
     arrayHolder = [];
     console.log('Running populate');
@@ -40,6 +42,9 @@ const populate = (count, length) => {
     console.log('Populated arrays', arrayHolder);
 };
 
+// Add together all values on respective indices.
+// Returns an array with the sums of all values of the same index in the arrayHolder.
+// i.e. index 0 would contain the sum of all index 0 values in every one of the arrayHolder's arrays.
 const procedure = () => {
     console.log('Running adding procedure');
     const n = arrayHolder.length;
@@ -74,6 +79,11 @@ const postProgress = (progress, total) => {
         });
     }
 };
+
+
+/*
+ Execute actions, which return results from execution, including time elapsed.
+ */
 
 const executePopulate = (count, length) => {
     const start = performance.now();
