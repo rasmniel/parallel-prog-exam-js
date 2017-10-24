@@ -13,10 +13,6 @@ body {
     user-select: none;
 }
 
-.header h1:last-child {
-    transform: scaleY(-1);
-}
-
 h1 {
     font-size: 30px;
     text-align: left;
